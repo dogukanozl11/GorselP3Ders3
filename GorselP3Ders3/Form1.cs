@@ -74,5 +74,32 @@ namespace GorselP3Ders3
                 MessageBox.Show("Tebrikler");
             }
         }
+
+        private void btnTahmin_Click(object sender, EventArgs e)
+        {
+            string tahmin = txtTahmin.Text;
+            if (tahmin == kelime)
+            {
+                MessageBox.Show("Tebrikler");
+                lblKelime.Text = kelime;
+                btnKelimeGetir.Enabled = true;
+               
+            }
+            else
+            {
+                MessageBox.Show("Yanlış");
+                lblKelime.Text = kelime;
+            }
+        }
+
+        private void btnÇıkıs_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes==MessageBox.Show("Emin Misin ?","Dikkat",MessageBoxButtons.YesNo))
+            {
+
+                Application.Exit();
+            }
+            
+        }
     }
 }
